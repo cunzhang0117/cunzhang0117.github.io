@@ -21,7 +21,7 @@ LOL
 #include <stdio.h>
 int main()
 {
-  printf("Urrrrr/n");
+  printf("rrrrr\n");
   return 0;
 }
 ```
