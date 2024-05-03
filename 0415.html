@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./0415style.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-bez@1.0.11/lib/jquery.bez.min.js"></script>
+    <script src="./0415JS.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script type="text/javascript" src="./blowup.js"></script>
+
+    <!-- -- -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "Dgejr2nX5BRoabUYL",
+        });
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="bg"></div>
+    <div class="left-box">
+      <div class="table-pic"></div>
+      <div class="computer-g">
+        <video
+          autoplay
+          muted
+          loop
+          src="./img/homePage/computer.webm"
+          type="video/webm"
+          class="computer-pic"
+        ></video>
+        <div class="folder-group">
+          <img
+            class="folder web-d"
+            src="./img/homePage/web.png"
+            onclick='folderClicked("web")'
+          />
+          <img
+            class="folder game-d"
+            src="./img/homePage/game.png"
+            onclick='folderClicked("game")'
+          />
+          <img
+            class="folder graphic-d"
+            src="./img/homePage/graphic.png"
+            onclick='folderClicked("graphic")'
+          />
+          <img
+            class="folder draw-d"
+            src="./img/homePage/draw.png"
+            onclick='folderClicked("draw")'
+          />
+        </div>
+        <div class="portfolio">
+          <div class="portfolio-photo"></div>
+        </div>
+      </div>
+      <video
+        class="character-pic"
+        autoplay
+        muted
+        loop
+        src="./img/homePage/character.webm"
+        type="video/webm"
+      ></video>
+      <div class="cover-bg"></div>
+    </div>
+    <div class="right-box">
+      <div class="right-window-d"></div>
+      <div class="portfolio-detial">
+        <div class="por-up">
+          <div class="por-up-l">
+            <img src="./img/homePage/photo.png" alt="" class="pro-photo" />
+          </div>
+          <div class="por-up-r">
+            <i class="fa-solid fa-envelope"></i>
+            <a
+              class="fa-brands fa-github"
+              href="https://github.com/cunzhang0117"
+              target="_blank"
+            ></a>
+            <p class="inline-p">&emsp;&emsp;哈囉！</p>
+            <p class="inline-p">我的綽號是村長</p>
+            <img
+              src="./img/homePage/p02.gif"
+              alt=""
+              style="transform: translateY(5px)"
+            />
+            <p>
+              &emsp;&emsp;我喜歡<span style="font-weight: 600">平面設計</span
+              >，例如繪製插圖、電商宣傳圖或編排型錄等， 尤其喜歡<span
+                class="text-ani"
+                >動</span
+              >起來的感覺，所以也接觸一些動畫、影像編輯。
+            </p>
+
+            <p>
+              &emsp;&emsp;最後，我將這些興趣綜合起來，開啟了遊戲與網頁設計的旅程！
+            </p>
+          </div>
+        </div>
+        <!-- <hr /> -->
+        <div class="por-down">
+          <div class="por-down-u">
+            <div class="por-down-ul">
+              <p style="text-align: center; font-weight: 600; font-size: 20px">
+                專長／工具軟體
+              </p>
+              <div class="skills">
+                <p>
+                  －設計－<br />
+                  平面設計：Photoshop．After Effects．Indesign<br />
+                  遊戲設計：Unity
+                </p>
+                <p>
+                  －程式－<br />
+                  前端技術：HTML．CSS．JavaScript｜Ajax．jQuery｜<br />
+                  後端技術：C#｜LINQ｜<br />
+                  整合框架：ASP.NET MVC<br />
+                  資料庫　：SQL Serve
+                </p>
+                <p>
+                  －證照－<br />
+                  日文檢定：JLPT N2
+                </p>
+              </div>
+            </div>
+
+            <img src="./img/homePage/p01.png" alt="" class="pro-p01" />
+          </div>
+          <div class="por-down-d">
+            <form id="contact-form">
+              <!-- To simplify the tutorial, the value is static. -->
+              <input type="hidden" name="contact_number" value="697483" />
+              <label>Name</label>
+              <input
+                type="text"
+                name="user_name"
+                required="required"
+                style="width: 100px"
+              />
+              <label>Email</label>
+              <input
+                type="email"
+                name="user_email"
+                required="required"
+                style="width: 250px"
+              />
+              <textarea
+                name="message"
+                required="required"
+                placeholder="Contact me"
+              ></textarea
+              ><br />
+              <input type="submit" value="Send" />
+              <div class="my-email">
+                &nbsp;<i class="fa-solid fa-caret-right"></i>
+                <p style="display: inline" class="email-a">
+                  cunzhang0117@gmail.com
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="close-portfolio">
+        <div class="close-p-icon"></div>
+      </div>
+    </div>
+    <!-- 網站作品 -->
+    <div class="portfolio-box pb-website" style="display: none">
+      <div class="select-area">
+        <ul class="select-list web-list">
+          <li
+            onclick='changePageWeb("p-website", this)'
+            class="select-a-list-l"
+          >
+            個人網誌
+          </li>
+          <li
+            onclick='changePageWeb("p-SP", this)'
+            class="select-a-list-l select-li"
+          >
+            Stocks Prophet
+          </li>
+        </ul>
+      </div>
+      <div class="portfolio-innerbox">
+        <!-- 網誌 -->
+        <div class="p-website p-close" style="display: none; opacity: 0">
+          <a
+            class="fa-brands fa-github"
+            href="https://github.com/cunzhang0117/CunzhangWebsite"
+            target="_blank"
+          ></a>
+          <div class="por-tittle">
+            <h2 style="font-weight: normal; display: inline">個人網誌</h2>
+            <p style="display: inline; font-style: italic">2023/12/13-23</p>
+            <p>一個紀錄遊戲心得的地方</p>
+          </div>
+          <div class="por-content">
+            結合記錄遊戲過程及畫圖的興趣，建立網站將內容分類整理。<br /><br />
+            各頁內容：<br />
+            <table>
+              <tr>
+                <td class="por-td-tittle">主頁</td>
+                <td class="por-td-con">
+                  上半部會更新近況，隨機推廣遊戲。下半部為文章列表
+                </td>
+              </tr>
+              <tr>
+                <td class="por-td-tittle">標籤頁</td>
+                <td class="por-td-con">以遊戲類型作為分類</td>
+              </tr>
+              <tr>
+                <td class="por-td-tittle">願望清單頁</td>
+                <td class="por-td-con">
+                  列出想玩但還沒發售的遊戲，有公布發售日的遊戲會顯示倒數，沒有則顯示等待中
+                </td>
+              </tr>
+              <tr>
+                <td class="por-td-tittle">文章頁</td>
+                <td class="por-td-con">
+                  上半部為文章內容，有遊戲截圖的幻燈片可以拖拉。中間為創作區，會放出對該遊戲的二創作品。下半部為留言區
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="por-tool">
+            <p style="font-size: 16px; margin: 0">技術工具：</p>
+            <table>
+              <tr>
+                <td class="por-td-tittle">相關技術</td>
+                <td class="por-td-con">HTML．CSS．JavaScript</td>
+              </tr>
+              <tr>
+                <td class="por-td-tittle">軟體工具</td>
+                <td class="por-td-con">
+                  Visual Studio Code．Photoshop．Aseprite
+                </td>
+              </tr>
+            </table>
+          </div>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/oxASL4s0fwg?si=Mga31amdTHVvAx92"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <!-- 網誌 -->
+        <!-- 股票 -->
+        <div class="p-SP p-close" style="display: none; opacity: 0">
+          <a
+            class="fa-brands fa-github"
+            href="https://github.com/cunzhang0117/StockProphet_Project/tree/cunzhangBranch"
+            target="_blank"
+          ></a>
+          <div class="por-tittle">
+            <h2 style="font-weight: normal; display: inline">Stocks Prophet</h2>
+            <p style="display: inline; font-style: italic">2024/02/06-04/10</p>
+            <p>一個可建立股票預測和市場資訊分享的平台</p>
+          </div>
+          <div class="por-content">
+            使用者可透過多種預測模型，根據個人需求設定模型參數，建立短期或長期的價格預測。<br />
+            也提供相關的股市資訊，讓投資者隨時了解市場動態，掌握投資機會。<br /><br />
+            負責項目：
+            <table>
+              <tr>
+                <td class="por-td-tittle">前端</td>
+                <td class="por-td-con">
+                  首頁．個股頁．體驗預測頁．網站整體設計風格
+                </td>
+              </tr>
+              <tr>
+                <td class="por-td-tittle">後端</td>
+                <td class="por-td-con">
+                  抓取及篩選資料庫的股票資料<br />
+                  新增及取消收藏，並更新資料庫<br />
+                </td>
+              </tr>
+            </table>
+            <br />
+            各頁內容：
+            <table>
+              <tr>
+                <td class="por-td-tittle">首頁</td>
+                <td class="por-td-con">
+                  透過組員寫的API，每次進入網站會抓取新的股市資訊，我將數字資料整理成易理解的方式呈現。搜尋欄可輸入股票名稱或代碼，使用jQuery
+                  UI建立的Autocomplete會帶出關鍵字檢索
+                </td>
+              </tr>
+              <tr>
+                <td class="por-td-tittle">個股頁</td>
+                <td class="por-td-con">
+                  上半部為技術面走勢圖（K棒、成交量、MACD、KD值）和基本面資料，內容為當下至一年前的股票資料。下半部是所有使用者建立的預測卡片，有基本的分類排序。點擊卡片愛心會加入收藏，同時也能看到該卡片的收藏人數
+                </td>
+              </tr>
+              <tr>
+                <td class="por-td-tittle">體驗預測頁</td>
+                <td class="por-td-con">
+                  以逐步解釋的方式，帶使用者走過一次預測流程
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="por-tool">
+            <p style="font-size: 16px; margin: 0">技術工具：</p>
+            <table>
+              <tr>
+                <td class="por-td-tittle">相關技術</td>
+                <td class="por-td-con">
+                  HTML．CSS．JavaScript｜<span style="color: #bcbcbc"
+                    >jQuery．D3.js．TechanJS．AJAX</span
+                  >｜．C#｜<span style="color: #bcbcbc">LINQ</span>｜．ASP.Net
+                  MVC
+                </td>
+              </tr>
+              <tr>
+                <td class="por-td-tittle">軟體工具</td>
+                <td class="por-td-con">
+                  Visual Studio．MSSQL．GitHub．Photoshop．After Effects
+                </td>
+              </tr>
+            </table>
+          </div>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/7TdI2sta6Hk?si=7j5KKtP1ReUsSuFK"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <!-- 股票 -->
+        <img src="./img/homePage/p03.png" class="pro-pic" />
+      </div>
+      <div class="close-p-box">
+        <div class="close-pb-icon"></div>
+      </div>
+    </div>
+    <!-- 遊戲作品 -->
+    <div class="portfolio-box pb-game" style="display: none">
+      <div class="select-area">
+        <ul class="select-list game-list">
+          <li onclick='changePageGame("p-gift", this)' class="select-b-list-l">
+            The Gift
+          </li>
+          <li
+            onclick='changePageGame("p-majo", this)'
+            class="select-b-list-l select-li"
+          >
+            魔女的晚宴
+          </li>
+        </ul>
+      </div>
+      <div class="portfolio-innerbox">
+        <!-- The Gift -->
+        <div class="p-gift p-close" style="display: none; opacity: 0">
+          <a
+            class="fa-brands fa-github"
+            href="https://github.com/cunzhang0117/The_Gift"
+            target="_blank"
+          ></a>
+          <div class="por-tittle">
+            <h2 style="font-weight: normal; display: inline">The Gift</h2>
+            <p style="display: inline; font-style: italic">2022畢製作品</p>
+            <p>等距像素的2D恐怖解謎遊戲</p>
+          </div>
+          <div class="por-content">
+            遊戲的故事主要圍繞在一個家庭裡，玩家將扮演哥哥在家中探索，並透過提示紙條找到生日禮物，藉由紙條的引導和周遭物品的探索，逐漸發現家中的異常以及真相。<br /><br />
+            負責項目：<br />
+            <table>
+              <tr>
+                <td class="por-td-tittle">程式</td>
+                <td class="por-td-con">
+                  所有程式相關項目，包括URP畫面渲染調整、動畫事件的編排等
+                </td>
+              </tr>
+              <tr>
+                <td class="por-td-tittle">美術</td>
+                <td class="por-td-con">部分CG繪製，過場動畫及預告片剪輯</td>
+              </tr>
+              <tr>
+                <td class="por-td-tittle">企劃</td>
+                <td class="por-td-con">遊戲架構、關卡設定</td>
+              </tr>
+            </table>
+            <br />
+            遊戲特色：<br />
+            <table>
+              <tr>
+                <td class="por-td-tittle">畫面</td>
+                <td class="por-td-con">
+                  場景採等距視角繪製，相較於2D遊戲常見的Top-down畫面，玩家能看到更多細節<br />
+                  運用URP的Lights
+                  2D調整畫面色彩、光線等，讓場景有白天、夜晚的區別<br />
+                  利用Post-processing和Shader
+                  Graph進一步刻劃場景，如窗光處的微塵感、畫面的色差效果等<br />
+                </td>
+              </tr>
+              <tr>
+                <td class="por-td-tittle">遊戲機制</td>
+                <td class="por-td-con">
+                  加入限時事件，增加遊戲體驗<br />
+                  除了等距視角的探索，也有其他視角的互動事件<br />
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="por-tool">
+            <p style="font-size: 16px; margin: 0">技術工具：</p>
+            <table>
+              <tr>
+                <td class="por-td-tittle">相關技術</td>
+                <td class="por-td-con">C#</td>
+              </tr>
+              <tr>
+                <td class="por-td-tittle">主要套件</td>
+                <td class="por-td-con">Fungus．DOTween</td>
+              </tr>
+              <tr>
+                <td class="por-td-tittle">軟體工具</td>
+                <td class="por-td-con">
+                  Visual Studio．Unity．Aseprite．Juice FX．Photoshop．After
+                  Effects
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="por-img-g">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/eqaWYQF4LiA?si=HaWT2y_601eSxeh0"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+            <div class="por-img-slick game-g-slick">
+              <div>
+                <img
+                  src="https://res.cloudinary.com/drklfzmmr/image/upload/v1714484565/The%20Gift/%E8%AA%BF%E6%9F%A5_ubkw3w.gif"
+                  alt=""
+                  class="por-img-l"
+                />
+                <p>白框表示可調查的物件</p>
+              </div>
+              <div>
+                <img
+                  src="https://res.cloudinary.com/drklfzmmr/image/upload/v1714484806/The%20Gift/%E9%96%8B%E9%A0%AD_dihli6.gif"
+                  alt=""
+                  class="por-img-l"
+                />
+                <p>轉場的環境光變化</p>
+              </div>
+              <div>
+                <img
+                  src="https://res.cloudinary.com/drklfzmmr/image/upload/v1714484571/The%20Gift/%E4%BA%92%E5%8B%95_dfic6f.gif"
+                  alt=""
+                  class="por-img-l"
+                />
+                <p>開燈&映出角色的鏡子</p>
+              </div>
+              <div>
+                <img
+                  src="https://res.cloudinary.com/drklfzmmr/image/upload/v1714484517/The%20Gift/%E7%95%AB%E6%A1%86_frscgf.gif"
+                  alt=""
+                  class="por-img-l"
+                />
+                <p>過場驚嚇點1</p>
+              </div>
+              <div>
+                <img
+                  src="https://res.cloudinary.com/drklfzmmr/image/upload/v1714484575/The%20Gift/%E5%A6%B9%E5%A6%B9_hjvh1r.gif"
+                  alt=""
+                  class="por-img-l"
+                />
+                <p>過場驚嚇點2</p>
+              </div>
+              <div>
+                <img
+                  src="https://res.cloudinary.com/drklfzmmr/image/upload/v1714485034/The%20Gift/%E6%8A%93%E6%89%8B_hwlvhz.gif"
+                  alt=""
+                  class="por-img-l"
+                />
+                <p>第一人稱互動事件</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 晚宴 -->
+        <div class="p-majo p-close" style="display: none; opacity: 0">
+          <div class="por-tittle">
+            <h2 style="font-weight: normal; display: inline">魔女的晚宴</h2>
+            <p style="display: inline; font-style: italic">2021</p>
+            <p>像素探索遊戲</p>
+          </div>
+          <div class="por-content">
+            誤入禁區的主角，遇到一正一邪的魔女<br />
+            為了逃出危機四伏的森林，玩家需要與兩位魔女周旋，找到出口……<br /><br />
+            負責項目：
+            <table>
+              <tr>
+                <td class="por-td-tittle">程式</td>
+                <td class="por-td-con">所有程式相關項目</td>
+              </tr>
+              <tr>
+                <td class="por-td-tittle">美術</td>
+                <td class="por-td-con">場景素材繪製</td>
+              </tr>
+            </table>
+          </div>
+          <div class="por-tool">
+            <p style="font-size: 16px; margin: 0">技術工具：</p>
+            <table>
+              <tr>
+                <td class="por-td-tittle">相關技術</td>
+                <td class="por-td-con">C#</td>
+              </tr>
+              <tr>
+                <td class="por-td-tittle">軟體工具</td>
+                <td class="por-td-con">
+                  Visual Studio．Unity．Aseprite．Photoshop．After Effects
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="por-img-g">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/NyKrSloMmAI?si=B0icH6nez8GwfvUf"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+            <div class="por-img-slick game-m-slick">
+              <div>
+                <img
+                  src="https://res.cloudinary.com/drklfzmmr/image/upload/v1714496436/majo/%E6%93%8B%E8%B7%AF_vcz7uj.gif"
+                  alt=""
+                  class="por-img-l"
+                />
+                <p>擋住玩家去路的NPC</p>
+              </div>
+              <div>
+                <img
+                  src="https://res.cloudinary.com/drklfzmmr/image/upload/v1714508054/majo/sss_1_ilrghg.gif"
+                  alt=""
+                  class="por-img-l"
+                />
+                <p>觸發敵人登場</p>
+              </div>
+              <div>
+                <img
+                  src="https://res.cloudinary.com/drklfzmmr/image/upload/v1714496640/majo/%E6%95%B5%E4%BA%BA2_smj2xv.gif"
+                  alt=""
+                  class="por-img-l"
+                />
+                <p>敵人會在特定範圍內追擊玩家</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img src="./img/homePage/p03.png" class="pro-pic" />
+      </div>
+      <div class="close-p-box">
+        <div class="close-pb-icon"></div>
+      </div>
+    </div>
+    <!-- 平面作品 -->
+    <div class="portfolio-box pb-graphic" style="display: none">
+      <div class="select-area">
+        <ul class="select-list graphic-list">
+          <li onclick='changePageGD("p-catalog", this)' class="select-c-list-l">
+            商品型錄
+          </li>
+          <li
+            onclick='changePageGD("p-dm", this)'
+            class="select-c-list-l select-li"
+          >
+            廣告傳單
+          </li>
+          <li
+            onclick='changePageGD("p-shop", this)'
+            class="select-c-list-l select-li"
+          >
+            電商平台
+          </li>
+        </ul>
+      </div>
+      <div class="portfolio-innerbox">
+        <div class="p-catalog p-close" style="opacity: 0">
+          <img src="./img/homePage/p04.gif" class="loading-gif" />
+          <div class="slider-for-catalog">
+            <div>
+              <img src="./img/graphic/catalog/catalogB.jpg" class="sim" />
+              <div class="sih">
+                <p>台灣經貿網 - 2023年英國國際安全科技專業大展 展示型錄</p>
+              </div>
+            </div>
+            <div>
+              <img src="./img/graphic/catalog/B01.jpg" class="sim" />
+              <div class="sih">
+                <p>英國展型錄內頁</p>
+              </div>
+            </div>
+            <div>
+              <img src="./img/graphic/catalog/B02.jpg" class="sim" />
+              <div class="sih">
+                <p>英國展型錄內頁</p>
+              </div>
+            </div>
+            <div>
+              <img src="./img/graphic/catalog/catalogA.jpg" class="sim" />
+              <div class="sih">
+                <p>公司產品型錄</p>
+              </div>
+            </div>
+            <div>
+              <img src="./img/graphic/catalog/A01.jpg" class="sim" />
+              <div class="sih">
+                <p>公司產品型錄內頁</p>
+              </div>
+            </div>
+            <div>
+              <img src="./img/graphic/catalog/A02.jpg" class="sim" />
+              <div class="sih">
+                <p>公司產品型錄內頁</p>
+              </div>
+            </div>
+            <div>
+              <img src="./img/graphic/catalog/A03.jpg" class="sim" />
+              <div class="sih">
+                <p>公司產品型錄內頁</p>
+              </div>
+            </div>
+          </div>
+          <div class="slider-nav-catalog">
+            <div><img src="./img/graphic/catalog/catalogB.jpg" /></div>
+            <div><img src="./img/graphic/catalog/B01.jpg" /></div>
+            <div><img src="./img/graphic/catalog/B02.jpg" /></div>
+            <div><img src="./img/graphic/catalog/catalogA.jpg" /></div>
+            <div><img src="./img/graphic/catalog/A01.jpg" /></div>
+            <div><img src="./img/graphic/catalog/A02.jpg" /></div>
+            <div><img src="./img/graphic/catalog/A03.jpg" /></div>
+          </div>
+        </div>
+        <div class="p-dm p-close" style="opacity: 0">
+          <img src="./img/homePage/p04.gif" class="loading-gif" />
+          <div class="slider-for-dm">
+            <div>
+              <img src="./img/graphic/DM/flyersJ02.jpg" />
+              <div class="sih">
+                <p>台灣經貿網 - 2023年日本拓銷展 摺頁傳單</p>
+              </div>
+            </div>
+            <div>
+              <img src="./img/graphic/DM/flyersJ03.jpg" />
+              <div class="sih">
+                <p>日本拓銷展傳單正面</p>
+              </div>
+            </div>
+            <div>
+              <img src="./img/graphic/DM/flyersJ.jpg" />
+              <div class="sih">
+                <p>日本拓銷展傳單背面</p>
+              </div>
+            </div>
+            <div>
+              <img src="./img/graphic/DM/flyersA.jpg" />
+              <div class="sih">
+                <p>公司產品規格單</p>
+              </div>
+            </div>
+            <div>
+              <img src="./img/graphic/DM/flyersB.jpg" />
+              <div class="sih">
+                <p>公司產品規格單</p>
+              </div>
+            </div>
+          </div>
+          <div class="slider-nav-dm">
+            <div><img src="./img/graphic/DM/flyersJ02.jpg" /></div>
+            <div><img src="./img/graphic/DM/flyersJ03.jpg" /></div>
+            <div><img src="./img/graphic/DM/flyersJ.jpg" /></div>
+            <div><img src="./img/graphic/DM/flyersA.jpg" /></div>
+            <div><img src="./img/graphic/DM/flyersB.jpg" /></div>
+          </div>
+        </div>
+        <!-- 電商平台 -->
+        <div class="p-shop p-close" style="opacity: 0">
+          <img src="./img/homePage/p04.gif" class="loading-gif" />
+          <div class="slider-for-shop">
+            <div>
+              <img src="./img/graphic/shop/banner01.jpg" />
+              <div class="sih">
+                <p>兒童節特價活動</p>
+              </div>
+            </div>
+            <div>
+              <img src="./img/graphic/shop/t01.jpg" />
+              <div class="sih">
+                <p>兒童節特價活動</p>
+              </div>
+            </div>
+            <div>
+              <img src="./img/graphic/shop/light01.jpg" />
+              <div class="sih">
+                <p>燈具相關產品圖</p>
+              </div>
+            </div>
+          </div>
+          <div class="slider-nav-shop">
+            <div><img src="./img/graphic/shop/banner01.jpg" /></div>
+            <div><img src="./img/graphic/shop/t01.jpg" /></div>
+            <div><img src="./img/graphic/shop/light01.jpg" /></div>
+          </div>
+        </div>
+        <img src="./img/homePage/p03.png" class="pro-pic" />
+      </div>
+      <div class="close-p-box">
+        <div class="close-pb-icon"></div>
+      </div>
+    </div>
+    <!-- 插圖 -->
+    <div class="portfolio-box pb-draw" style="display: none">
+      <div class="select-area">
+        <ul class="select-list draw-list">
+          <li onclick='changePageDraw("p-pic", this)' class="select-d-list-l">
+            靜態
+          </li>
+          <li onclick='changePageDraw("p-ani", this)' class="select-d-list-l">
+            動態
+          </li>
+        </ul>
+      </div>
+      <div class="portfolio-innerbox">
+        <div class="p-pic p-close" style="opacity: 0">
+          <img src="./img/homePage/p04.gif" class="loading-gif" />
+          <div class="slider-for-pic">
+            <div>
+              <img src="./img/draw/A/colt.jpg" />
+              <div class="sih">
+                <p>《Cult of the Lamb》像素同人</p>
+              </div>
+            </div>
+            <div>
+              <img src="./img/draw/A/d.jpg" />
+              <div class="sih">
+                <p>《Cult of the Lamb》同人</p>
+              </div>
+            </div>
+            <div>
+              <img src="./img/draw/A/LC01.jpg" />
+              <div class="sih">
+                <p>《Lethal company》同人</p>
+              </div>
+            </div>
+            <div>
+              <img src="./img//draw/A/sino02.jpg" />
+              <div class="sih">
+                <p>《MINDHACK》同人吊飾</p>
+              </div>
+            </div>
+            <div>
+              <img src="./img/draw/A/sino03.jpg" />
+              <div class="sih">
+                <p>《MINDHACK》同人吊飾</p>
+              </div>
+            </div>
+            <div>
+              <img src="./img/draw/A/ultrakill.jpg" />
+              <div class="sih">
+                <p>《Ultrakill》同人</p>
+              </div>
+            </div>
+            <div>
+              <img src="./img/draw/A/zim.jpg" />
+              <div class="sih">
+                <p>《Invader Zim》同人</p>
+              </div>
+            </div>
+          </div>
+          <div class="slider-nav-pic">
+            <div><img src="./img/draw/A/colt.jpg" /></div>
+            <div><img src="./img/draw/A/d.jpg" /></div>
+            <div><img src="./img/draw/A/LC01.jpg" /></div>
+            <div><img src="./img/draw/A/sino02.jpg" /></div>
+            <div><img src="./img/draw/A/sino03.jpg" /></div>
+            <div><img src="./img/draw/A/ultrakill.jpg" /></div>
+            <div><img src="./img/draw/A/zim.jpg" /></div>
+          </div>
+        </div>
+        <div class="p-ani p-close" style="opacity: 0">
+          <img src="./img/homePage/p04.gif" class="loading-gif" />
+          <div class="slider-for-ani">
+            <div>
+              <img src="./img/draw/B/0423B.gif" />
+              <div class="sih">
+                <p>《BAKUI OC》像素同人</p>
+              </div>
+            </div>
+            <div>
+              <img src="./img/draw/B/0613.gif" />
+              <div class="sih">
+                <p>《MINDHACK》像素同人</p>
+              </div>
+            </div>
+            <div>
+              <img src="./img/draw/B/up01.gif" />
+              <div class="sih">
+                <p>《The Upturned》像素同人</p>
+              </div>
+            </div>
+            <div>
+              <video src="./img/draw/B/ivnyag.mp4" muted controls></video>
+              <div class="sih">
+                <p>《MINDHACK》同人</p>
+              </div>
+            </div>
+            <div>
+              <video src="./img/draw/B/sinoball.mp4" muted controls></video>
+              <div class="sih">
+                <p>《MINDHACK》同人</p>
+              </div>
+            </div>
+          </div>
+          <div class="slider-nav-ani">
+            <div><img src="./img/draw/B/0423B.png" /></div>
+            <div><img src="./img/draw/B/0613.png" /></div>
+            <div><img src="./img/draw/B/up01.png" /></div>
+            <div><img src="./img/draw/B/ivnyag.jpg" /></div>
+            <div><img src="./img/draw/B/sinoball.jpg" /></div>
+          </div>
+        </div>
+        <img src="./img/homePage/p03.png" class="pro-pic" />
+      </div>
+      <div class="close-p-box">
+        <div class="close-pb-icon"></div>
+      </div>
+    </div>
+  </body>
+</html>
