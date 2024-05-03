@@ -394,19 +394,22 @@ function folderClicked(folderName) {
       case "graphic": {
         $(".pb-graphic").removeClass("p-box-show").removeClass("p-box-close");
         $(".pb-graphic").show().addClass("p-box-show");
+        $(`.p-graphic .loading-gif`).show();
         $(".p-catalog")
           .show()
-          .css({
-            height: "100%",
-            "overflow-y": "visible",
-          })
           .animate(
             {
+              height: "100%",
+              "overflow-y": "visible",
               opacity: 1,
             },
-            500
+            500,
+            function () {
+              nowPage = "p-catalog";
+              $(`.${nowPage} .loading-gif`).hide();
+            }
           );
-        nowPage = "p-catalog";
+
         // var workList = $(".select-a-list li");
         $(".select-c-list-l").removeClass("LiSelected");
         $(".graphic-list li:first").addClass("LiSelected");
@@ -424,19 +427,22 @@ function folderClicked(folderName) {
       case "draw": {
         $(".pb-draw").removeClass("p-box-show").removeClass("p-box-close");
         $(".pb-draw").show().addClass("p-box-show");
+        $(`.p-pic .loading-gif`).show();
         $(".p-pic")
           .show()
-          .css({
-            height: "100%",
-            "overflow-y": "visible",
-          })
           .animate(
             {
+              height: "100%",
+              "overflow-y": "visible",
               opacity: 1,
             },
-            500
+            500,
+            function () {
+              nowPage = "p-pic";
+              $(`.${nowPage} .loading-gif`).hide();
+            }
           );
-        nowPage = "p-pic";
+
         // var workList = $(".select-a-list li");
         $(".select-d-list-l").removeClass("LiSelected");
         $(".draw-list li:first").addClass("LiSelected");
