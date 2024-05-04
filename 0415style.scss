@@ -10,6 +10,13 @@
   //   scrollbar-gutter: stable both-edges;
   //   overflow: visible;
 }
+.web-loading {
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 999;
+}
 body {
   display: flex;
   background-image: url("./img/homePage/BG.png");
