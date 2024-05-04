@@ -9,6 +9,15 @@
   box-sizing: border-box;
 }
 
+.web-loading {
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 999;
+  pointer-events: none;
+}
+
 body {
   display: flex;
   background-image: url("./img/homePage/BG.png");
