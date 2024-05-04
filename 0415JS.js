@@ -2,6 +2,15 @@ var portfolioClicked = false;
 var folderOpen = false;
 
 $(function () {
+  $(".web-loading").animate(
+    {
+      opacity: 0,
+    },
+    1000,
+    function () {
+      $(".web-loading").hide();
+    }
+  );
   var hasSwipe = false;
   $(".slider-for-catalog, .slider-for-dm, .slider-for-shop").on(
     "swipe",
