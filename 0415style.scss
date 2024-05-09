@@ -20,6 +20,7 @@
 }
 body {
   display: flex;
+  background-color: #090909;
   background-image: url("./img/homePage/BG.png");
   font-family: "pixelFont";
   cursor: url("./img/cEye01.png") 25 25, auto;
@@ -68,7 +69,7 @@ p {
     top: 50%;
     height: 640px;
     width: 800px;
-    transform: translate(-50%, -55%);
+    transform: translate(-50%, -55%) scale(0.9);
     display: flex;
     flex-direction: column;
     padding: 30px;
@@ -130,9 +131,10 @@ p {
     // background-color: cadetblue;
     position: absolute;
     bottom: 0;
-    left: 200px;
+    left: 50%;
+    height: 65%;
     pointer-events: none;
-    transform: scale(0.8);
+    transform: translateX(-60%);
     transform-origin: bottom center;
   }
 
@@ -175,13 +177,14 @@ p {
     outline: 80px #161517 solid;
   }
   .portfolio-detial {
-    padding: 50px;
+    overflow-y: scroll;
+    padding: 30px;
     display: flex;
     flex-direction: column;
     // align-items: center;
     transform: translate(100px, 20px);
     height: 80vh;
-    width: 35vw;
+    width: 40vw;
     border-radius: 5px;
     background: rgb(233, 233, 233);
     background: linear-gradient(
@@ -196,15 +199,18 @@ p {
     &:hover {
       transform: translate(100px, 5px);
     }
+    &::-webkit-scrollbar {
+      display: none;
+    }
     .por-up {
-      height: 180px;
+      height: 30%;
       // background-color: aqua;
       display: flex;
       margin-bottom: 20px;
       .por-up-l {
         position: relative;
         // border: 2px solid black;
-        width: 150px;
+        width: 25%;
         background-color: #e4e4e4;
         border-radius: 15px;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
@@ -212,20 +218,15 @@ p {
 
         .pro-photo {
           position: absolute;
+          width: 60%;
           right: 0;
           bottom: 0;
           // transform: scale(2);
         }
-      }
-      .por-up-r {
-        // border: 2px red solid;
-        padding-left: 20px;
-        transform: translateY(-5px);
-        flex: 1;
         .fa-envelope {
           position: absolute;
-          right: 20px;
-          top: -30px;
+          left: 10px;
+          top: 10px;
           font-size: 36px;
           color: black;
           transition: all 0.3s;
@@ -237,7 +238,6 @@ p {
             animation: cursorP 0.5s linear infinite;
           }
         }
-
         .copied-text::after {
           content: "Copied!";
           font-weight: normal;
@@ -257,11 +257,10 @@ p {
 
           animation: copiedAni 1s forwards;
         }
-
         .fa-github {
           position: absolute;
-          right: -30px;
-          top: -30px;
+          left: 10px;
+          top: 50px;
           font-size: 36px;
           color: black;
           text-decoration: none;
@@ -273,6 +272,13 @@ p {
             animation: cursorP 0.5s linear infinite;
           }
         }
+      }
+      .por-up-r {
+        // border: 2px red solid;
+        padding-left: 20px;
+        transform: translateY(-20px);
+        flex: 1;
+
         .inline-p {
           display: inline-block;
         }
@@ -311,9 +317,10 @@ p {
 
         .pro-p01 {
           position: absolute;
-          width: 214px;
-          height: 166px;
-          right: 55px;
+          // width: 214px;
+          // height: 166px;
+          width: 30%;
+          right: 30px;
           top: 340px;
         }
       }
@@ -414,11 +421,11 @@ p {
     background-color: rgb(133, 42, 42);
     position: absolute;
     border-radius: 50%;
-    height: 70px;
-    width: 70px;
+    height: 50px;
+    width: 50px;
     z-index: 2;
-    top: 35px;
-    right: 35px;
+    top: 25px;
+    right: 25px;
     transition: all 0.5s;
 
     &:hover {
@@ -437,7 +444,7 @@ p {
         position: absolute;
         left: 50%;
         top: 50%;
-        width: 35px;
+        width: 30px;
         border: rgb(233, 233, 233) 2px solid;
         border-radius: 15px;
         transform: translate(-50%, -50%) rotate(-45deg);
@@ -448,7 +455,7 @@ p {
         position: absolute;
         left: 50%;
         top: 50%;
-        width: 35px;
+        width: 30px;
         border: rgb(204, 203, 203) 2px solid;
         border-radius: 15px;
         transform: translate(-50%, -50%) rotate(45deg);
